@@ -1,9 +1,10 @@
 const PORT = 4000;
 import express from "express";
-import cors from "cors";
 const app = express();
 import erros from "./_errors.js"
 import { getItems, getItemsSpecs } from "./funcitons/items.js"
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
